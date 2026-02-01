@@ -8,3 +8,5 @@ soundfile>=0.12.1
 scipy>=1.7.0
 pyaudio>=0.2.13
 SpeechRecognition>=3.10.0
+ffmpeg
+dlp
