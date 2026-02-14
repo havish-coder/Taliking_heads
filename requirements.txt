@@ -12,3 +12,4 @@ pillow
 tqdm
 moviepy
 torch
+rtmlib
