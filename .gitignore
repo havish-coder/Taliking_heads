@@ -1,0 +1,12 @@
+# datasets
+DATASET/Video_WithoutAudio/
+DATASET/audio_clips/
+DATASET/processed_dataset_wholebody/
+
+# models
+DATASET/dwpose_models/
+
+# python
+.venv/
+__pycache__/
+*.pyc
