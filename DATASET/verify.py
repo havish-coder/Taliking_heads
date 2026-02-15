@@ -18,7 +18,7 @@ def main():
     # ---- Load video frame (PADDED final video) ----
     cap = cv2.VideoCapture(str(VIDEO_PATH))
     if not cap.isOpened():
-        print("❌ Cannot open video")
+        print(" Cannot open video")
         return
 
     cap.set(cv2.CAP_PROP_POS_FRAMES, FRAME_INDEX)
@@ -26,18 +26,18 @@ def main():
     cap.release()
 
     if not ret:
-        print("❌ Cannot read frame")
+        print(" Cannot read frame")
         return
 
     # ---- Load pose file (single file format) ----
     if not POSE_FILE.exists():
-        print("❌ Pose file not found:", POSE_FILE)
+        print(" Pose file not found:", POSE_FILE)
         return
 
     data = np.load(POSE_FILE, allow_pickle=True)
 
     if FRAME_INDEX >= len(data):
-        print("❌ Frame index out of range")
+        print(" Frame index out of range")
         return
 
     frame_data = data[FRAME_INDEX]
