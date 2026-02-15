@@ -28,7 +28,7 @@ warnings.filterwarnings("ignore")
 # ==========================================
 # MODEL LOADING
 # ==========================================
-print("🚀 Loading model...")
+print("Loading model...")
 det_model_path = str(MODEL_DIR / "yolox_l.onnx")
 pose_model_path = str(MODEL_DIR / "dw-ll_ucoco_384.onnx")
 
@@ -39,7 +39,7 @@ wholebody = Wholebody(
     backend='opencv',
     device='cuda' if torch.cuda.is_available() else 'cpu'
 )
-print("✅ Model loaded")
+print(" Model loaded")
 
 # ==========================================
 # FPS CONVERSION
@@ -122,7 +122,7 @@ if __name__ == "__main__":
         print("No MP4 files found.")
         exit()
 
-    video_file = video_files[0]  # 🔥 ONLY FIRST VIDEO
+    video_file = video_files[0]  # Currently testing on only one video
 
     std_path = PROCESSED_VIDEOS_DIR / f"{video_file.stem}_24fps.mp4"
     final_path = FINAL_VIDEO_DIR / f"{video_file.stem}.mp4"
@@ -174,8 +174,8 @@ if __name__ == "__main__":
 
     np.save(pose_output_path, all_pose_data)
 
-    print(f"✅ Saved video: {final_path.name}")
-    print(f"✅ Saved pose file: {pose_output_path.name}")
-    print("🎯 Keypoints now perfectly match final_videos resolution.")
+    print(f"Saved video: {final_path.name}")
+    print(f"Saved pose file: {pose_output_path.name}")
+    print("Keypoints now perfectly match final_videos resolution.")
 
 
