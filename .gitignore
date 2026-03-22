@@ -1,10 +1,11 @@
 # datasets
-DATASET/Video_WithoutAudio/
-DATASET/audio_clips/
-DATASET/processed_dataset_wholebody/
+Preprocessing/Video_WithoutAudio/
+Preprocessing/audio_clips/
+Preprocessing/processed_dataset_wholebody/
+Preprocessing/audio_embeddings/
 
 # models
-DATASET/dwpose_models/
+Preprocessing/dwpose_models/
 
 # python
 .venv/
